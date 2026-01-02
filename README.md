@@ -1,40 +1,40 @@
-# MyStockWebAPI: API de Gestión de Stock
+---
 
-[![Licencia: MIT](https://img.shields.io/badge/Licencia-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# MyStockWebAPI: Stock Management API
 
-Una API RESTful completa para la gestión de inventario y control de stock, construida con **Clean Architecture** en ASP.NET Core 8.
+A comprehensive RESTful API for inventory management and stock control, built using **Clean Architecture** in ASP.NET Core 8.
 
-## 🚀 Descripción del Proyecto
+## 🚀 Project Description
 
-Esta API proporciona una solución robusta y escalable para la gestión de inventarios, ideal para aplicaciones empresariales. Permite llevar un control detallado de productos, existencias y movimientos de almacén.
+This API provides a robust and scalable solution for inventory management, ideal for enterprise applications. It allows for detailed tracking of products, existing stock, and warehouse movements.
 
-### Funcionalidades Principales
+### Key Features
 
--   **Gestión de Productos**: Operaciones CRUD completas para productos (Crear, Leer, Actualizar, Eliminar).
--   **Control de Stock**: Monitorización de cantidades disponibles, reservadas y alertas de stock bajo.
--   **Movimientos de Stock**: Registro de entradas, salidas y ajustes de inventario.
--   **Consultas Avanzadas**: Búsqueda de productos por SKU, categoría y disponibilidad.
--   **Documentación Interactiva**: Endpoints documentados y listos para probar a través de Swagger (OpenAPI).
+* **Product Management**: Full CRUD operations for products (Create, Read, Update, Delete).
+* **Stock Control**: Monitoring of available and reserved quantities, including low stock alerts.
+* **Stock Movements**: Recording of inventory entries, exits, and adjustments.
+* **Advanced Queries**: Search products by SKU, category, and availability.
+* **Interactive Documentation**: Endpoints are documented and ready to test via Swagger (OpenAPI).
 
-## 🏛️ Arquitectura
+## 🏛️ Architecture
 
-El proyecto sigue los principios de **Clean Architecture**, lo que garantiza un código desacoplado, mantenible y fácil de testear. La separación de responsabilidades se organiza en las siguientes capas:
+The project follows **Clean Architecture** principles, ensuring decoupled, maintainable, and easily testable code. The separation of concerns is organized into the following layers:
 
--   **Domain**: Contiene las entidades de negocio y la lógica de dominio pura (ej. `Product`, `Stock`).
--   **Application**: Orquesta los casos de uso de la aplicación, define DTOs y las interfaces de los servicios.
--   **Infrastructure**: Implementa la lógica de acceso a datos (repositorios) y otros servicios externos.
--   **Presentation (WebAPI)**: Expone los endpoints de la API, maneja las solicitudes HTTP y la interacción con el cliente.
+* **Domain**: Contains business entities and pure domain logic (e.g., `Product`, `Stock`).
+* **Application**: Orchestrates application use cases, defines DTOs, and service interfaces.
+* **Infrastructure**: Implements data access logic (repositories) and other external services.
+* **Presentation (WebAPI)**: Exposes API endpoints, handles HTTP requests, and manages client interaction.
 
-## 💻 Tecnologías Utilizadas
+## 💻 Technologies Used
 
--   **Framework**: ASP.NET Core 8
--   **Arquitectura**: Clean Architecture
--   **Lenguaje**: C#
--   **Pruebas Unitarias**: xUnit y Moq
--   **Documentación**: Swagger (OpenAPI)
--   **Persistencia**: Repositorios en memoria (fácilmente extensible a una base de datos como SQL Server o PostgreSQL con Entity Framework Core).
+* **Framework**: ASP.NET Core 8
+* **Architecture**: Clean Architecture
+* **Language**: C#
+* **Unit Testing**: xUnit and Moq
+* **Documentation**: Swagger (OpenAPI)
+* **Persistence**: In-memory repositories (easily extensible to databases like SQL Server or PostgreSQL using Entity Framework Core).
 
-## 📂 Estructura del Proyecto
+## 📂 Project Structure
 
 ```
 MyStockWebAPI/
@@ -44,10 +44,10 @@ MyStockWebAPI/
 │   └── ...
 ├── Application/
 │   ├── DTOs/
-│   ├── Services/ (Interfaces y Implementaciones)
+│   ├── Services/ (Interfaces and Implementations)
 │   └── ...
 ├── Infrastructure/
-│   ├── Repositories/ (Implementaciones)
+│   ├── Repositories/ (Implementations)
 │   └── DependencyInjection.cs
 ├── WebAPI/
 │   ├── Controllers/
@@ -56,64 +56,78 @@ MyStockWebAPI/
 └── Tests/
     └── Application/
         └── Services/
+
 ```
 
-## 🏁 Cómo Empezar
+## 🏁 Getting Started
 
-Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local.
+Follow these steps to configure and run the project in your local environment.
 
-### Requisitos Previos
+### Prerequisites
 
--   [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
--   [Git](https://git-scm.com/)
+* [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+* [Git](https://git-scm.com/)
 
-### Pasos de Instalación
+### Installation Steps
 
-1.  **Clona el repositorio:**
-    ```bash
-    git clone https://github.com/juan9772/MyStockWebAPI.git
-    cd MyStockWebAPI
-    ```
+1. **Clone the repository:**
+```bash
+git clone https://github.com/juan9772/MyStockWebAPI.git
+cd MyStockWebAPI
 
-2.  **Restaura las dependencias de NuGet:**
-    ```bash
-    dotnet restore
-    ```
+```
 
-3.  **Construye el proyecto:**
-    ```bash
-    dotnet build
-    ```
 
-4.  **Ejecuta la aplicación:**
-    ```bash
-    dotnet run --project MyStock.WebAPI
-    ```
+2. **Restore NuGet dependencies:**
+```bash
+dotnet restore
 
-La API estará disponible en `https://localhost:7001`.
+```
 
-### Acceso a Swagger
 
-Para explorar y probar los endpoints de forma interactiva, abre tu navegador y ve a:
-**[https://localhost:7001/swagger](https://localhost:7001/swagger)**
+3. **Build the project:**
+```bash
+dotnet build
 
-## 🧪 Ejecutar Pruebas
+```
 
-Para asegurar la calidad y el correcto funcionamiento de la lógica de negocio, puedes ejecutar las pruebas unitarias:
+
+4. **Run the application:**
+```bash
+dotnet run --project MyStock.WebAPI
+
+```
+
+
+
+The API will be available at `https://localhost:7001`.
+
+### Accessing Swagger
+
+To explore and test the endpoints interactively, open your browser and go to:
+**[https://localhost:7001/swagger](https://www.google.com/search?q=https://localhost:7001/swagger)**
+
+## 🧪 Running Tests
+
+To ensure quality and correct business logic behavior, you can run the unit tests:
 
 ```bash
 dotnet test
+
 ```
 
-El comando buscará y ejecutará todas las pruebas en la solución, mostrando un resumen de los resultados.
+This command will find and execute all tests in the solution, displaying a summary of the results.
 
-## 📜 Licencia
+## 📜 License
 
-Este proyecto está distribuido bajo la **Licencia MIT**. Consulta el archivo `LICENSE.txt` para más detalles.
+This project is distributed under the **MIT License**. See the `LICENSE.txt` file for more details.
 
-## 📧 Contacto
+## 📧 Contact
 
 **Juan Jose Tamayo Mazo**
--   **Email**: jjtamayo97+githubP@gmail.com
--   **LinkedIn**: [www.linkedin.com/in/jjtamayomazo](https://www.linkedin.com/in/jjtamayomazo)
--   **GitHub Issues**: Para reportar bugs o solicitar nuevas funcionalidades, por favor, crea un [issue](https://github.com/juan9772/MyStockWebAPI/issues).
+
+* **Email**: jjtamayo97+githubP@gmail.com
+* **LinkedIn**: [www.linkedin.com/in/jjtamayomazo](https://www.linkedin.com/in/jjtamayomazo)
+* **GitHub Issues**: To report bugs or request new features, please create an [issue](https://github.com/juan9772/MyStockWebAPI/issues).
+
+---
